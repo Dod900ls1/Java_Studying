@@ -1,0 +1,30 @@
+Array Manipulation:
+
+Create an array of integers and populate it with some values.
+Write a program to find the sum, average, maximum, and minimum values in the array.
+Implement sorting algorithms (e.g., bubble sort, selection sort) to sort the array in ascending or descending order.
+Write a program to reverse the elements in the array.
+
+ArrayList Operations:
+Create an ArrayList of strings and add some elements to it.
+Remove specific elements from the ArrayList using different methods (e.g., remove(), removeAll()).
+Use the ArrayList methods to search for an element, check if an element exists, and retrieve elements by index.
+Iterate over the ArrayList using a for-each loop and perform some action on each element.
+
+LinkedList Usage:
+Create a LinkedList of integers and add elements to it.
+Insert an element at the beginning, middle, and end of the LinkedList.
+Remove elements from the LinkedList using different methods (e.g., removeFirst(), removeLast(), remove(index)).
+Implement a stack or queue using LinkedList and perform operations such as push, pop, enqueue, and dequeue.
+
+Working with 2D Arrays:
+Declare and initialize a 2D array of integers or characters.
+Write a program to find the sum of rows, columns, or diagonals in the 2D array.
+Perform matrix operations like addition, subtraction, and multiplication.
+Implement a tic-tac-toe game using a 2D array to represent the board and check for a win condition.
+
+Collections Framework:
+Use HashSet or TreeSet to store a collection of unique elements and perform set operations like union, intersection, and difference.
+Use HashMap or TreeMap to store key-value pairs and perform operations like adding elements, retrieving values, and iterating over entries.
+Explore the Collections class methods (e.g., sort, reverse) to manipulate lists and arrays.
+Convert between different collection types (e.g., ArrayList to HashSet) using methods from the Collections class.
