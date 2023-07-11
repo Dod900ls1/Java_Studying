@@ -1,84 +1,64 @@
 package TwoDArrays;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.ArrayList;
-import TwoDArrays.MatrixMultiplicationException;
+import java.util.Arrays;
+import java.util.Random;
 
 public class TwoDArrayLearning {
     public static void main(String[] args) {
-        int rows = 5;
-        int cols = 5;
-        int [][] TwoDarray = random2DArray(rows, cols);
-        print2Darray(TwoDarray);
-        System.out.println(sumOfRows(TwoDarray));
+        int[][] matrix1 = createRandomArray(3, 2);
+        int[][] matrix2 = createRandomArray(2, 4);
+
+        System.out.println("Matrix 1:");
+        printMatrix(matrix1);
+        System.out.println("Matrix 2:");
+        printMatrix(matrix2);
+
         try {
-            int[][] matrix1 = random2DArray(3, 4);
-            int[][] matrix2 = random2DArray(4, 3);
-            int[][] product = matrixMultiplication(matrix1, matrix2);
-            print2Darray(product);
-        } catch (MatrixMultiplicationException e) {
-            System.out.println("Error: " + e.getMessage());
+            int[][] result = multiplyMatrices(matrix1, matrix2);
+            System.out.println("Resultant Matrix:");
+            printMatrix(result);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Matrices cannot be multiplied.");
         }
     }
 
-    public static void print2Darray(int[][] arr){
-        int rows = arr.length;
-        int cols = arr[0].length;
-        for(int i = 0; i < rows; i++){
-            for(int j = 0; j < cols; j++){
-                System.out.print(arr[j][i] + " ");
+    public static int[][] createRandomArray(int rows, int columns) {
+        Random random = new Random();
+        int[][] array = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                array[i][j] = random.nextInt(10); // Random integer from 0 to 9
             }
-            System.out.println();
         }
-        
+        return array;
     }
 
-    public static int[][] random2DArray(int rows, int cols){
-        int[][] arr = new int[rows][cols];
-        for(int i=0; i<rows; i++){
-            for(int j=0; j<cols; j++){
-                int randomNum = ThreadLocalRandom.current().nextInt(0, rows*cols + 1);;
-                arr[i][j] = randomNum;
-            }
-        }
-        return arr;
-    }
-
-    public static ArrayList<Integer> sumOfRows(int[][] arr){
-        int rows = arr.length;  
-        int cols = arr[0].length;
-        ArrayList<Integer> sum = new ArrayList<>();
-        for(int i = 0; i<rows; i++){
-            int rowSum = 0;
-            for(int j = 0; j < cols; j++){
-                rowSum = rowSum+arr[i][j];
-            }
-            sum.add(rowSum);
-        }
-        
-        return sum;
-    }   
-
-    public static int[][] matrixMultiplication(int[][] matrix1, int[][] matrix2) throws MatrixMultiplicationException{
-        int cols1 = matrix1[0].length;
+    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
         int rows1 = matrix1.length;
-        int cols2 = matrix2[0].length;
+        int columns1 = matrix1[0].length;
         int rows2 = matrix2.length;
-        
-        if (cols1 != rows2) {
-            throw new MatrixMultiplicationException("Matrix dimensions are incompatible for multiplication.");
+        int columns2 = matrix2[0].length;
+
+        if (columns1 != rows2) {
+            throw new IllegalArgumentException("Matrices cannot be multiplied.");
         }
-        
-        int[][] result = new int[rows1][cols2];
-        
-        for(int i = 0; i < rows1; i++){
-            for(int j = 0; j < cols2; j++){
-                for(int k = 0; k < cols1; k++){
-                    result[i][j] += matrix1[i][k]*matrix2[k][j];
+
+        int[][] result = new int[rows1][columns2];
+
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < columns2; j++) {
+                for (int k = 0; k < columns1; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
                 }
             }
         }
 
         return result;
     }
-}
 
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
+        }
+        System.out.println();
+    }
+}
