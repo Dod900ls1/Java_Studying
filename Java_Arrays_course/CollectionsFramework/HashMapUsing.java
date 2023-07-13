@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 
-public class Framworks {
+public class HashMapUsing {
     public static void main(String[] args) {
         try {
             System.out.println(wordCounter("text.txt", 5));

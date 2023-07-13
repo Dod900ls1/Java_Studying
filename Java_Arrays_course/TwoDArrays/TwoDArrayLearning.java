@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class TwoDArrayLearning {
     public static void main(String[] args) {
-        int[][] matrix1 = createRandomArray(3, 2);
+        int[][] matrix1 = createRandomArray(3, 3);
         int[][] matrix2 = createRandomArray(2, 4);
 
         System.out.println("Matrix 1:");
