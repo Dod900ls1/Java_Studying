@@ -6,6 +6,9 @@ I leverage ChatGPT to assist me in writing descriptions for my practice tasks, w
 # Using of Google
 The google I use to get understanding of syntax and OOP principles. The OOP I`m getting from <a href="Oracle.com">oracle</a> and the most of syntax I get from <a href="w3schools.com">W3schools</a> and <a href="https://stackoverflow.com/">StackoverFlow</a>
 
+# Coursera 
+For OOP learning I`ve got a course on coursera that is called <a href=https://www.coursera.org/programs/natsional-nii-univiersitiet-zaporiz-ka-politiekhnika-learning-program-9mv7c/learn/object-oriented-programming-with-java>Introduction to Object-Oriented Programming with Java</a>. All theory and labaratory works have been gotten from there. 
+
 # Time boundaries
 Here I`ll write how much time each topic took me to learn with exact dates.
 
@@ -19,3 +22,8 @@ _Linked List Usage_ - 06/07/2023-07/07/2023
 _2D Array_ - 08/07/2023-09/07/2023 *Added exception handling*
 
 _Frameworks (HashMap/TreeMap, HashSet/TreeSet)_ - 11/07/2023 *Added exception handling*+*Working with files*
+
+### OOP 
+_Lab 1 - Basic syntax of classes_ - 15/07/2023
+
+_Lab 2 - Constructors practice_ - 16/07/2023
