@@ -15,6 +15,7 @@ Here I`ll write how much time each topic took me to learn with exact dates.
 ### Arrays 01/07/2023-11/07/2023
 <details>
 <summary>Each section timings</summary>
+
 _Array Manipulation_ - 01/07/2023-02/07/2023
 
 _Array list operations_ - 04/07/2023
@@ -29,6 +30,7 @@ _Frameworks (HashMap/TreeMap, HashSet/TreeSet)_ - 11/07/2023 *Added exception ha
 ### OOP
 <details>
 <summary>Each section timings</summary> 
+
 _Lab 1 - Basic syntax of classes_ - 15/07/2023
 
 _Lab 2 - Constructors practice_ - 16/07/2023
