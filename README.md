@@ -31,7 +31,18 @@ _Frameworks (HashMap/TreeMap, HashSet/TreeSet)_ - 11/07/2023 *Added exception ha
 <details>
 <summary>Each section timings</summary> 
 
+#### Module 1 15/07/2023-20/07/2023
+
 _Lab 1 - Basic syntax of classes_ - 15/07/2023
 
 _Lab 2 - Constructors practice_ - 16/07/2023
+
+_Lab 3 - Packages manipulation practice_ - 17/07/2023
+
+_Lab 4 - Final module practice_ - 19/07/2023-20/07/2023
+
+#### Module 2 
+
+_Lab 1 - Inheritance practice_ - 21/07/2023
+
 </details>

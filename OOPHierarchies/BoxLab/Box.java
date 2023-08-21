@@ -1,6 +1,19 @@
-package IntrodutionToOOP.Lab2;
+package BoxLab;
 
 public class Box {
+
+	
+	public Box(double length, double height, double width) {
+        setLength(length);
+        setHeight(height);
+        setWidth(width);
+    }
+
+    public Box(double sideLength) {
+        this(sideLength, sideLength, sideLength);
+    }
+    
+
     private double height;
 
     public double getHeight() {
@@ -31,15 +44,7 @@ public class Box {
         this.length = length;
     }
 
-    public Box(double length, double height, double width) {
-        setLength(length);
-        setHeight(height);
-        setWidth(width);
-    }
 
-    public Box(double sideLength) {
-        this(sideLength, sideLength, sideLength);
-    }
 
     public double getVolume() {
         return length * width * height;
@@ -52,10 +57,11 @@ public class Box {
     public static void main(String[] args) {
         Box box = new Box(5.6);
         Box rectangle = new Box(5.5, 2.5, 4.1);
+        Box rectangle1 = new Cube(5.5);
 
 
         int c = 0;
-        for (Box i : new Box[]{box, rectangle}) {
+        for (Box i : new Box[]{box, rectangle, rectangle1}) {
             c = c+1;
             System.out.printf("Box: %s", c);
             System.out.println();

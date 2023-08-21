@@ -1,8 +1,21 @@
-package IntrodutionToOOP.Lab1;
+package Lab1;
+
 import java.time.LocalDate;
 import java.time.Period;
 
 class Car {
+	
+	public Car() {}
+	public Car(String name) {
+		this.setName(name);
+	}
+	public Car(String name, int speed, int fuel, boolean engineState) {
+		this(name);
+		this.setSpeed(speed);
+		this.setFuel(fuel);
+		this.setEngine(engineState);
+	}
+	
     private String name;
 
     public String getName() {
@@ -49,21 +62,4 @@ class Car {
 		return Period.between(manufactured, LocalDate.now()).getYears();
 	}
 
-    public static void main(String[] args) {
-        Car miniCooper = new Car();
-        miniCooper.setSpeed(50);
-        miniCooper.setFuel(20);
-        miniCooper.setName("S501");
-        miniCooper.setManufactured(LocalDate.of(2010, 8, 12));
-
-        Car landRower = new Car();
-        landRower.setSpeed(100);
-        landRower.setFuel(40);
-        landRower.setName("discovery");
-        landRower.setManufactured(LocalDate.of(2016, 9, 11));
-        
-        for(Car i: new Car[]{miniCooper, landRower}){
-            System.out.printf("Car %s has been manufactured in %d and goes at %d mph.%n", i.getName(), i.getAge(), i.getSpeed());
-        }
-    }
 }
